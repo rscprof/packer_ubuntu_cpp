@@ -1,0 +1,41 @@
+#cloud-config
+autoinstall:
+  # Guide: https://github.com/canonical/autoinstall-desktop
+  # Good example: https://gist.github.com/b4tman/c3fe4223d20aa234b67ee50df2efcc8b
+  version: 1
+  identity:
+        realname: ''
+        hostname: almaz
+        username: student
+        password: '$6$rounds=4096$or3w7k.Ykdus7EwZ$qrVAewBCLFWE1GCpoGekUSMv.hKd1y13EgXxg5GQDyz9TE7WNn8Kz6rcV/xEXYJDa.l0uTdbADcR2oKb24zTA/'
+  ssh:
+    install-server: yes
+    allow-pw: yes
+  late-commands:
+    # ' and " is different here. With " installation freezes
+    - echo 'student ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/ubuntu
+  packages:
+    - clang 
+    - gcc 
+    - g++
+    - valgrind 
+    - cmake 
+    - make 
+    - qtcreator
+    - git
+    # For virtual box additionals
+    - build-essential
+    - perl
+    - dkms
+  snaps:
+    - name: code
+      classic: true
+    - name: protobuf
+      classic: true
+  locale: "ru_RU"
+  timezone: Europe/Moscow
+  keyboard: 
+    layout: us,ru 
+    # count of variants has to be equal to count of layouts...
+    variant: ","
+    toggle: alt_shift_toggle

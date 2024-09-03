@@ -1,0 +1,6 @@
+FROM ubuntu
+RUN apt update -y
+RUN apt install -y git
+RUN apt install -y make
+RUN apt install -y sudo
+RUN git clone https://github.com/canonical/subiquity.git && cd subiquity/ && make install_deps 

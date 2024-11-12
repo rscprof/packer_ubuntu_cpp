@@ -27,11 +27,15 @@ autoinstall:
     - build-essential
     - perl
     - dkms
+    # new packages
+    - qt6-base-dev
+    - libprotobuf-dev
+    - protobuf-compiler
   snaps:
     - name: code
       classic: true
-    - name: protobuf
-      classic: true
+    #- name: protobuf
+    #  classic: true
   locale: "ru_RU"
   timezone: Europe/Moscow
   keyboard: 

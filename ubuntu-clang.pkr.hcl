@@ -21,7 +21,7 @@ source "virtualbox-iso" "ubuntu" {
   memory             = 8192
   disk_size          = 20000
   #Without this don't boot, vmsvga don't work either
-  gfx_controller     = "vboxsvga"
+  gfx_controller     = "vmsvga"
   gfx_vram_size = 128
   gfx_accelerate_3d = true
   guest_os_type      = "Ubuntu_64"

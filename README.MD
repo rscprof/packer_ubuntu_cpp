@@ -6,4 +6,4 @@ This is a project for creating vm image with latest ubuntu and some tools for cp
 - [check.sh](http/check.sh) check user-data's script
 - [meta-data](http/meta-data) Mandatory file for ubuntu's autoinstall
 
-In directory "download" it needs to download iso of ubuntu desktop 24.04 and named it as ubuntu.iso
+In directory "download" it needs to download iso of ubuntu desktop 24.10 and named it as ubuntu.iso

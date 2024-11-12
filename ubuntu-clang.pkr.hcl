@@ -12,9 +12,9 @@ packer {
 
 source "virtualbox-iso" "ubuntu" {
   iso_url            = "download/ubuntu.iso"
-  #Ubuntu desktop 24.04 
-  iso_checksum       = "sha256:c2e6f4dc37ac944e2ed507f87c6188dd4d3179bf4a3f9e110d3c88d1f3294bdc"
-  # iso_checksum       = "sha256:e240e4b801f7bb68c20d1356b60968ad0c33a41d00d828e74ceb3364a0317be9"
+  #Ubuntu desktop 24.10 
+  # iso_checksum       = "sha256:c2e6f4dc37ac944e2ed507f87c6188dd4d3179bf4a3f9e110d3c88d1f3294bdc"
+  iso_checksum       = "sha256:489079483487f92ad0d2f3d4b6c88a7b197969eb286b277534047920854a8b03"
   ssh_username       = "student"
   ssh_password       = "student"
   cpus               = 4 
